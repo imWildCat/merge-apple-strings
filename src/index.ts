@@ -82,7 +82,13 @@ const main = async () => {
     }
   }
 
-  await writeFileAsync(outputFile, mergedStringFile);
+  const before = stringFiles.reduce((acc, cur) => acc + Object.keys(cur ?? {}).length, 0);
+  console.log(`Before merge, ${before} entries`);
+  console.log(`After merge, ${Object.keys(mergedStringFile).length} entries`);
+
+  await writeFileAsync(outputFile, mergedStringFile, { encoding: charset, wantsComments: comment });
+
+  console.log(`Merged to ${outputFile}`);
 };
 
 function mergeComment(comment1: string | undefined, comment2: string | undefined): string | undefined {
