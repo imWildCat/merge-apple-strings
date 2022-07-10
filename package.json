@@ -1,0 +1,35 @@
+{
+  "name": "merge-apple-strings",
+  "version": "0.0.1",
+  "description": "Merge .strings files in Apple escyosystem",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imWildCat/merge-apple-strings.git"
+  },
+  "keywords": [
+    "strings",
+    "localization",
+    "merge",
+    "apple"
+  ],
+  "author": "imWildCat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imWildCat/merge-apple-strings/issues"
+  },
+  "homepage": "https://github.com/imWildCat/merge-apple-strings#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "apple-strings": "^0.0.2",
+    "yargs": "^17.5.1"
+  }
+}
