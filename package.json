@@ -3,8 +3,13 @@
   "version": "0.0.1",
   "description": "Merge .strings files in Apple escyosystem",
   "main": "lib/index.js",
+  "bin": {
+    "merge-apple-strings": "lib/index.js"
+  },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
