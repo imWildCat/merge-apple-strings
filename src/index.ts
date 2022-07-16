@@ -1,6 +1,7 @@
+#!/usr/bin/env node
+
 import {
   I18nStringsFiles,
-  I18nStringsWithCommentEntry,
   readFileAsync,
   writeFileAsync,
 } from 'apple-strings';
