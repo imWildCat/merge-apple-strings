@@ -54,7 +54,9 @@ const main = async () => {
     }
   }
 
-  const stringFiles = await Promise.all(inputFiles.map((filePath) => readFileAsync(filePath, { encoding: charset, wantsComments: comment })));
+  const stringFiles = await Promise.all(inputFiles.map((filePath) => {
+    return readFileAsync(filePath, { encoding: charset, wantsComments: comment });
+  }));
 
   const mergedStringFile: I18nStringsFiles = {};
 
