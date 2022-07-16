@@ -44,6 +44,10 @@ const main = async () => {
     throw new Error('No input files specified');
   }
 
+  if (inputFiles.length < 2) {
+    throw new Error('At least two input files are required');
+  }
+
   if (!outputFile) {
     throw new Error('No output file specified');
   }
